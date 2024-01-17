@@ -1,12 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import Counter from './src/components/Counter';
+import { CounterContextProvider } from './src/context/CounterContext';
+import CounterWithZustand from './src/components/CounterWithZustand';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+
+    <CounterContextProvider>
+      <View style={styles.container}>
+        {/* <Counter /> */}
+        <CounterWithZustand />
+      </View>
+    </CounterContextProvider>
   );
 }
 
