@@ -23,12 +23,10 @@ export const useCounter = () => {
     const context = useContext(CounterContext);
 
     if(context === undefined){
-        throw new Error('useCounter hook must be call in CounterContextProvider ')
+        throw new Error('useCounter hook must be call in CounterContextProvider ');
     }
 
     return context;
 
 
-
-
-}
+};
